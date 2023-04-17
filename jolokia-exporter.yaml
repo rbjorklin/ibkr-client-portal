@@ -1,0 +1,101 @@
+metrics:
+- target: java_memory_heap_memory_usage_init
+  source:
+    mbean: java.lang:type=Memory
+    attribute: HeapMemoryUsage
+    path: init
+- target: java_memory_heap_memory_usage_used
+  source:
+    mbean: java.lang:type=Memory
+    attribute: HeapMemoryUsage
+    path: used
+- target: java_memory_heap_memory_usage_max
+  source:
+    mbean: java.lang:type=Memory
+    attribute: HeapMemoryUsage
+    path: max
+- target: java_memory_heap_memory_usage_committed
+  source:
+    mbean: java.lang:type=Memory
+    attribute: HeapMemoryUsage
+    path: committed
+- target: java_memory_non_heap_memory_usage_init
+  source:
+    mbean: java.lang:type=Memory
+    attribute: NonHeapMemoryUsage
+    path: init
+- target: java_memory_non_heap_memory_usage_used
+  source:
+    mbean: java.lang:type=Memory
+    attribute: NonHeapMemoryUsage
+    path: used
+- target: java_memory_non_heap_memory_usage_max
+  source:
+    mbean: java.lang:type=Memory
+    attribute: NonHeapMemoryUsage
+    path: max
+- target: java_memory_non_heap_memory_usage_committed
+  source:
+    mbean: java.lang:type=Memory
+    attribute: NonHeapMemoryUsage
+    path: committed
+- target: java_threading_thread_count
+  source:
+    mbean: java.lang:type=Threading
+    attribute: ThreadCount
+- target: java_runtime_start_time
+  source:
+    mbean: java.lang:type=Runtime
+    attribute: StartTime
+- target: java_runtime_uptime
+  source:
+    mbean: java.lang:type=Runtime
+    attribute: Uptime
+- target: java_garbage_collector_zgc_collection_time
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: CollectionTime
+- target: java_garbage_collector_zgc_collection_count
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: CollectionCount
+- target: java_garbage_collector_zgc_memory_usage_after_gc_zheap_max
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageAfterGc/ZHeap/max
+- target: java_garbage_collector_zgc_memory_usage_after_gc_zheap_init
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageAfterGc/ZHeap/init
+- target: java_garbage_collector_zgc_memory_usage_after_gc_zheap_committed
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageAfterGc/ZHeap/committed
+- target: java_garbage_collector_zgc_memory_usage_after_gc_zheap_used
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageAfterGc/ZHeap/used
+- target: java_garbage_collector_zgc_memory_usage_before_gc_zheap_max
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageBeforeGc/ZHeap/max
+- target: java_garbage_collector_zgc_memory_usage_before_gc_zheap_init
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageBeforeGc/ZHeap/init
+- target: java_garbage_collector_zgc_memory_usage_before_gc_zheap_committed
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageBeforeGc/ZHeap/committed
+- target: java_garbage_collector_zgc_memory_usage_before_gc_zheap_used
+  source:
+    mbean: java.lang:name=ZGC Cycles,type=GarbageCollector
+    attribute: LastGcInfo
+    path: memoryUsageBeforeGc/ZHeap/used
