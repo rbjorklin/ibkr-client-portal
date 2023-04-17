@@ -26,7 +26,7 @@ Customization
 * It is generally a good idea to set an explicit limit to Java memory usage using the ``-Xmx`` option.
 * To provide some insight into the performance of the Client Portal it is possible to hook up Jolokia_.
   To make the metrics exposed by Jolokia_ available in a more easily digestible
-  format one can use the included `jolokia-exporter.yaml`_ together with jolokia_exporter_ for Prometheus consumption.
+  format one can use the included `jolokia-exporter.yaml <jolokia-exporter.yaml>`_ together with jolokia_exporter_ for Prometheus consumption.
 
 Example: ``JAVA_OPTS="-javaagent:/jolokia-jvm.jar=host=0.0.0.0 -XX:+UseZGC -Xmx128m"``
 
