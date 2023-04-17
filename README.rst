@@ -16,7 +16,7 @@ There are some key modifications made to the init script and related config file
 * Allow access from all RFC1918_ subnets
 * Fix config file logic as it seems broken out-of-the-box
 * Add Jolokia jar to enable exposing metrics
-* Introduce `$JAVA_OPTS` to allow for easy customization
+* Introduce ``$JAVA_OPTS`` to allow for easy customization
 
 Customization
 -------------
