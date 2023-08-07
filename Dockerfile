@@ -7,7 +7,7 @@ ENV PACKAGE=clientportal.gw.zip
 WORKDIR /client-portal
 RUN apk add unzip curl sed
 
-RUN curl -Lo /jolokia-jvm.jar https://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-jvm/1.7.1/jolokia-jvm-1.7.1.jar
+RUN curl -Lo /jolokia-jvm.jar https://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-jvm/1.7.2/jolokia-jvm-1.7.2.jar
 RUN curl -LO https://download2.interactivebrokers.com/portal/${PACKAGE} &&\
     sha256sum ${PACKAGE} > ${PACKAGE}.sha256 &&\
     unzip ${PACKAGE} &&\

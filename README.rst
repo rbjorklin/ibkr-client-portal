@@ -17,6 +17,7 @@ There are some key modifications made to the init script and related config file
 * Fix config file logic as it seems broken out-of-the-box
 * Add Jolokia jar to enable exposing metrics
 * Introduce ``$JAVA_OPTS`` to allow for easy customization
+* It is possible to see which gateway version is part of the image by running: ``docker run --rm -ti --entrypoint /bin/ash <image> -c 'unzip dist/ibgroup.web.core.iblink.router.clientportal.gw.jar META-INF/MANIFEST.MF ; cat META-INF/MANIFEST.MF'``
 
 Customization
 -------------
