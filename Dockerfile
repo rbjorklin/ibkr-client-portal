@@ -1,4 +1,4 @@
-FROM docker.io/library/eclipse-temurin:20-jre-alpine
+FROM docker.io/library/eclipse-temurin:21-jre-alpine
 
 EXPOSE 5000
 
@@ -7,7 +7,7 @@ ENV PACKAGE=clientportal.gw.zip
 WORKDIR /client-portal
 RUN apk add unzip curl sed
 
-RUN curl -Lo /jolokia-jvm.jar https://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-jvm/1.7.2/jolokia-jvm-1.7.2.jar
+RUN curl -Lo /jolokia-jvm.jar https://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-agent-jvm/2.0.0/jolokia-agent-jvm-2.0.0-javaagent.jar
 RUN curl -LO https://download2.interactivebrokers.com/portal/${PACKAGE} &&\
     sha256sum ${PACKAGE} > ${PACKAGE}.sha256 &&\
     unzip ${PACKAGE} &&\
